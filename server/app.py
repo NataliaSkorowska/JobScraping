@@ -29,7 +29,7 @@ if __name__ == '__main__':
     job_titles=[]
     #retrieve the HTML data
     URL = 'https://www.pracuj.pl/praca'
-    page = requests.get(URL)
+    page = requests.get(URL)    
 
     results = BeautifulSoup(page.content, 'html.parser')
     job_elems = results.find_all('a', class_='offer-details__title-link')

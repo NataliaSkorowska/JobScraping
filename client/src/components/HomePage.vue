@@ -5,5 +5,6 @@
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
   </b-navbar>
+  <h1>{{msg}}</h1>
 </div>
 </template>
