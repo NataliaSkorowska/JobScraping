@@ -1,7 +1,19 @@
 <template>
   <div class="home">
     <HomePage msg="Welcome to JobScraper"/>
-    <p>{{job_titles}}</p>
+    <table class="table">
+       <thead>
+            <tr>
+              <th scope="col">Job titles</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(job_title, index) in job_titles" :key="index">
+              <td>{{job_title}}</td>
+            </tr>
+          </tbody>
+    </table>
   </div>
 </template>
 

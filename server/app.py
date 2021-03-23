@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
-# from flask_cors import CORS
+from flask_cors import CORS
 
 
 # configuration
@@ -12,11 +12,8 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 # enable CORS
-# CORS(app, resources={r'/*': {'origins': '*'}})
+CORS(app, resources={r'/*': {'origins': '*'}})
 
-
-
-# sanity check route
 @app.route('/', methods=['GET'])
 def getJob():
     return jsonify({
@@ -35,7 +32,8 @@ if __name__ == '__main__':
     job_elems = results.find_all('a', class_='offer-details__title-link')
     for job_elem in job_elems:
         job_titles.append(job_elem.text)
-        print(job_elem.text, end='\n'*2)
+        # print(job_elem.text, end='\n'*2)
+    print(job_titles)
 
     app.run()
     
