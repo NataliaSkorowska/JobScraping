@@ -1,19 +1,28 @@
 <template>
   <div class="home">
     <HomePage msg="Welcome to JobScraper"/>
-    <table class="table">
-       <thead>
-            <tr>
-              <th scope="col">Job titles</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(job_title, index) in job_titles" :key="index">
-              <td>{{job_title}}</td>
-            </tr>
-          </tbody>
-    </table>
+    <!-- <b-container class="bv-example-row">
+    <b-col>1of2
+    <b-col v-for="(job_title, index) in job_titles" :key="index">
+      <b-row>{{job_title}}</b-row>
+    </b-col>
+    </b-col>
+    <b-col>2of2
+    <b-col v-for="(job_detail, index) in job_details" :key="index">
+      <b-row>{{job_detail}}</b-row>
+    </b-col>
+    </b-col>
+</b-container> -->
+<b-container class="bv-example-row">
+  <b-row>
+    <b-col>Tytuł
+      <b-row v-for="(job_title, index) in job_titles" :key="index">{{job_title}}</b-row>
+    </b-col>
+    <b-col>Lokalizacja
+      <b-row v-for="(job_detail, index) in job_details" :key="index">{{job_detail}}</b-row>
+    </b-col>
+  </b-row>
+</b-container>
   </div>
 </template>
 
@@ -38,6 +47,7 @@ export default {
       axios.get(path)
         .then((res) => {
           this.job_titles = res.data.job_titles;
+          this.job_details = res.data.job_details;
         })
         .catch((error) => {
           // eslint-disable-next-line
