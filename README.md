@@ -24,12 +24,12 @@ Licencja: Uznanie autorstwa
 | ID | Kategoria | Podkategoria | Nazwa krótka | Opis | Priorytet
 | ------------- | ------------- |------|------|---------|--------|
 | WF1  | Funkcjonalne  | Dostosowanie wyników | Wyszukiwanie | Możliwość wyszukania przez użytkownika interesujących go ofert pracy przez wpisanie w pasku wyszukania nazwy stanowiska. | P1
-| WF2  | Funkcjonalne  |-----| Paging | Możliwość przejścia do kolejnych stron z wynikami wyszukiwania jeśli ilość ofert na stronie przekracza 30 pozycji. Panel nawigacyjny znajduje się zarówno na górze jak i na dole listy wyników. | P3
+| WF2  | Funkcjonalne  |Nawigacja| Paging | Możliwość przejścia do kolejnych stron z wynikami wyszukiwania jeśli ilość ofert na stronie przekracza 30 pozycji. Panel nawigacyjny znajduje się zarówno na górze jak i na dole listy wyników. | P3
 | WF3 | Funkcjonalne  |Dostosowanie wyników| Sortowanie | Możliwość sortowania wyników wyszukiwania według upodobań użytkownika według: branży, rodzaju umowy, wymiaru pracy, miasta | P2
 | WF4  | Funkcjonalne  |Dostosowanie wyników| Filtrowanie | Możliwość filtrowania wyników wyszukiwania według nazwy stanowiska alfabetycznie rosnąco i malejąco oraz według oferowanego wynagrodzenia rosnąco i malejąco | P2
 | WF5  | Funkcjonalne  |Obsługa błędów| Brak wyników | Jeśli użytkownik wpisze w pasku wyszukiwania stanowisko, któremu nie będą odpowiadały żadne z ofert w naszej bazie zobaczy on komunikat o braku wyników do tego zapytania. | P2
-| WF6 | Funkcjonalne | --- | Zakładka statystyki | Poprzez wybranie odpowiedniej opcji z górnego panelu nawigacyjnego zatytułowanej „Statystyki” użytkownik zostaje przeniesiony do strony przedstawiającej statystyki związane np. z popularnością danych stanowisk na rynku pracy. | P1
-| WF7 | Funkcjonalne | --- | Strona główna | Po wejściu na stronę główną użytkownik widzi listę z ofertami pracy | P1
+| WF6 | Funkcjonalne | Nawigacja | Zakładka statystyki | Poprzez wybranie odpowiedniej opcji z górnego panelu nawigacyjnego zatytułowanej „Statystyki” użytkownik zostaje przeniesiony do strony przedstawiającej statystyki związane np. z popularnością danych stanowisk na rynku pracy. | P1
+| WF7 | Funkcjonalne | Nawigacja | Strona główna | Po wejściu na stronę główną użytkownik widzi listę z ofertami pracy | P1
 | WF8 | Funkcjonalne | Nawigacja | Przekierowanie | Po kliknięciu na tytuł oferty pracy użytkownik zostaje przekierowany do strony na której znajduje się to ogłoszenie | P3
 | WN1 | Niefunkcjonalne | Projektowe | Obsługiwane przeglądarki | Korzystanie z portalu przez użytkowników jest możliwe przy pomocy komputera z dostępem do sieci internetowej z zainstalowaną jedną z rekomendowanych przeglądarek internetowych: Google Chrome, Mozilla Firefox, Opera, Safari, Microsoft Edge. | P1
 | WN2 | Niefunkcjonalne | Projektowe | Dostęp do internetu | Do działania aplikacji niezbędny jest dostęp internetu. | P1
