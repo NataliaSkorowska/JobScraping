@@ -5,6 +5,8 @@ JobScraping is a portal analyzing the current job market and providing you with 
 * [Prawa autorskie](#Prawaautorskie)
 * [Specyfikacja wymagań](#Specyfikacjawymagań)
 
+
+
 ## Charakterystyka oprogramowania
 
 Nazwa skrócona: JobScraping
@@ -60,7 +62,7 @@ Licencja: Uznanie autorstwa
 |1| Python |Backend aplikacj| 3.9.2 (19.02.2021)|
 |2| Beautiful Soup | Scraping ofert pracy | 4.9.3 (03.10.2020)|
 |3| Pandas | Analiza danych dotyczących ofert pracy i tworzenie na ich podstawie statystyk | 1.2.3 (02.03.2021)|
-|4| Flask | Backend aplikacj |1.1.2 (03.04.2020) |
+|4| Flask | Backend aplikacji |1.1.2 (03.04.2020) |
 |5| Cors | Umożliwienie bezpiecznej wymiany danych pomiędzy stronami, z których pobierane są dane o ofertach pracy|3.0.10 (06.01.2021) |
 |6| HTML5 | Struktura aplikacji | 1.4938 (01.11.2016) |
 |7| Vue | Tworzenie dynamicznych interfejsów użytkownika| 2.9.6 |
