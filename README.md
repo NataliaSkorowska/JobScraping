@@ -1,9 +1,11 @@
 # JobScraping
 JobScraping is a portal analyzing the current job market and providing you with various statistics
 
-* [Charakterystyka oprogramowania](#Charakterystyka)
-* [Prawa autorskie](#PrawaAutorskie)
-* [Specyfikacja wymagań](#SpecyfikacjaWymagań)
+* [Charakterystyka oprogramowania](#Charakterystykaoprogramowania)
+* [Prawa autorskie](#Prawaautorskie)
+* [Specyfikacja wymagań](#Specyfikacjawymagań)
+
+
 
 ## Charakterystyka oprogramowania
 
@@ -24,12 +26,12 @@ Licencja: Uznanie autorstwa
 | ID | Kategoria | Podkategoria | Nazwa krótka | Opis | Priorytet
 | ------------- | ------------- |------|------|---------|--------|
 | WF1  | Funkcjonalne  | Dostosowanie wyników | Wyszukiwanie | Możliwość wyszukania przez użytkownika interesujących go ofert pracy przez wpisanie w pasku wyszukania nazwy stanowiska. | P1
-| WF2  | Funkcjonalne  |-----| Paging | Możliwość przejścia do kolejnych stron z wynikami wyszukiwania jeśli ilość ofert na stronie przekracza 30 pozycji. Panel nawigacyjny znajduje się zarówno na górze jak i na dole listy wyników. | P3
+| WF2  | Funkcjonalne  |Nawigacja| Paging | Możliwość przejścia do kolejnych stron z wynikami wyszukiwania jeśli ilość ofert na stronie przekracza 30 pozycji. Panel nawigacyjny znajduje się zarówno na górze jak i na dole listy wyników. | P3
 | WF3 | Funkcjonalne  |Dostosowanie wyników| Sortowanie | Możliwość sortowania wyników wyszukiwania według upodobań użytkownika według: branży, rodzaju umowy, wymiaru pracy, miasta | P2
 | WF4  | Funkcjonalne  |Dostosowanie wyników| Filtrowanie | Możliwość filtrowania wyników wyszukiwania według nazwy stanowiska alfabetycznie rosnąco i malejąco oraz według oferowanego wynagrodzenia rosnąco i malejąco | P2
 | WF5  | Funkcjonalne  |Obsługa błędów| Brak wyników | Jeśli użytkownik wpisze w pasku wyszukiwania stanowisko, któremu nie będą odpowiadały żadne z ofert w naszej bazie zobaczy on komunikat o braku wyników do tego zapytania. | P2
-| WF6 | Funkcjonalne | --- | Zakładka statystyki | Poprzez wybranie odpowiedniej opcji z górnego panelu nawigacyjnego zatytułowanej „Statystyki” użytkownik zostaje przeniesiony do strony przedstawiającej statystyki związane np. z popularnością danych stanowisk na rynku pracy. | P1
-| WF7 | Funkcjonalne | --- | Strona główna | Po wejściu na stronę główną użytkownik widzi listę z ofertami pracy | P1
+| WF6 | Funkcjonalne | Nawigacja | Zakładka statystyki | Poprzez wybranie odpowiedniej opcji z górnego panelu nawigacyjnego zatytułowanej „Statystyki” użytkownik zostaje przeniesiony do strony przedstawiającej statystyki związane np. z popularnością danych stanowisk na rynku pracy. | P1
+| WF7 | Funkcjonalne | Nawigacja | Strona główna | Po wejściu na stronę główną użytkownik widzi listę z ofertami pracy | P1
 | WF8 | Funkcjonalne | Nawigacja | Przekierowanie | Po kliknięciu na tytuł oferty pracy użytkownik zostaje przekierowany do strony na której znajduje się to ogłoszenie | P3
 | WN1 | Niefunkcjonalne | Projektowe | Obsługiwane przeglądarki | Korzystanie z portalu przez użytkowników jest możliwe przy pomocy komputera z dostępem do sieci internetowej z zainstalowaną jedną z rekomendowanych przeglądarek internetowych: Google Chrome, Mozilla Firefox, Opera, Safari, Microsoft Edge. | P1
 | WN2 | Niefunkcjonalne | Projektowe | Dostęp do internetu | Do działania aplikacji niezbędny jest dostęp internetu. | P1
@@ -52,6 +54,30 @@ Licencja: Uznanie autorstwa
 | WN19 | Niefunkcjonalne | Jakość | Struktura | Stosowanie zasad dotyczących podziału kodu na mniejsze pliki oraz przejrzystej struktury katalogów. | P3
 | WN20 | Niefunkcjonalne | Bezpieczeństwo | Środowisko | Aplikacja powinna zawierać środowiska testowe i produkcyjne. | P3
 | WN21 | Niefunkcjonalne | Jakość | Utrzymanie | Aplikacja po wdrożeniu na produkcję powinna być utrzymywana zgodnie z z obowiązującymi uwarunkowaniami prawnymi i technologicznymi poprzez monitorowanie funkcjonowania aplikacji, analizę zmian i wdrażanie ewentualnych poprawek. | P2
+
+## Architektura systemu/oprogramowania
+
+| Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
+| ------------- | ------------- |------|------|
+|1| Python |Backend aplikacj| 3.9.2 (19.02.2021)|
+|2| Beautiful Soup | Scraping ofert pracy | 4.9.3 (03.10.2020)|
+|3| Pandas | Analiza danych dotyczących ofert pracy i tworzenie na ich podstawie statystyk | 1.2.3 (02.03.2021)|
+|4| Flask | Backend aplikacji |1.1.2 (03.04.2020) |
+|5| Cors | Umożliwienie bezpiecznej wymiany danych pomiędzy stronami, z których pobierane są dane o ofertach pracy|3.0.10 (06.01.2021) |
+|6| HTML5 | Struktura aplikacji | 1.4938 (01.11.2016) |
+|7| Vue | Tworzenie dynamicznych interfejsów użytkownika| 2.9.6 |
+|8| Bootstrap | Wygląd interfejsów użytkownika aplikacji| 4.6.0 (19.01.2021) |
+|9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
+
+## Architektura uruchomieniowa:
+
+| Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
+| ------------- | ------------- |------|------|
+|1| Visual Studio Code | IDE używane przy tworzeniu projektu| 1.55.0 (30.03 2021)|
+|2| Windows 10 | System operacyjny, na którym stworzona została aplikacja| 20H2 19042.867(03.09.2020)|
+|3| Google Chrome | Przeglądarka, w której uruchamiana jest aplikacja| 89.0.4389.114 (03.03.2021)|
+|4| Git | System kontroli wersji | 2.31.1 (26.03.2021) |
+|5| GitHub | Serwis na którym zamieszczone zostało repozytorium z aplikacją | |
 
 
 
