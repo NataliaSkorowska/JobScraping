@@ -1,11 +1,11 @@
 # JobScraping
 JobScraping is a portal analyzing the current job market and providing you with various statistics
 
-* [Charakterystyka oprogramowania](#Charakterystyka-oprogramowania)
-* [Prawa autorskie](#Prawa-autorskie)
-* [Specyfikacja wymagań](#Specyfikacja-wymagań)
-* [Architektura systemu](#Architektura-systemu)
-* [Architektura uruchomieniowa](#Architektura-uruchomieniowa)
+* [Charakterystyka oprogramowania](#1-Charakterystyka-oprogramowania)
+* [Prawa autorskie](#2-Prawa-autorskie)
+* [Specyfikacja wymagań](#3-Specyfikacja-wymagań)
+* [Architektura systemu](#4-Architektura-systemu)
+* [Architektura uruchomieniowa](#5-Architektura-uruchomieniowa)
 
 
 
