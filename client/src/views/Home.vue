@@ -1,30 +1,58 @@
 <template>
-  <div class="home">
+  <div>
     <HomePage msg="Welcome to JobScraper"/>
-    <!-- <b-container class="bv-example-row">
-    <b-col>1of2
-    <b-col v-for="(job_title, index) in job_titles" :key="index">
-      <b-row>{{job_title}}</b-row>
-    </b-col>
-    </b-col>
-    <b-col>2of2
-    <b-col v-for="(job_detail, index) in job_details" :key="index">
-      <b-row>{{job_detail}}</b-row>
-    </b-col>
-    </b-col>
-</b-container> -->
-<b-container class="bv-example-row">
-  <b-row>
-    <b-col>Tytuł
-      <b-row v-for="(job_title, index) in job_titles" :key="index">{{job_title}}</b-row>
-    </b-col>
-    <b-col>Lokalizacja
-      <b-row v-for="(job_detail, index) in job_details" :key="index">{{job_detail}}</b-row>
-    </b-col>
-  </b-row>
-</b-container>
+    <div class="search-bar">
+      <input type="text"
+         placeholder="Szukaj"
+         v-model="filter" />
+    </div>
+    <b-pagination
+      v-model="currentPage"
+      :total-rows="rows"
+      :per-page="perPage"
+      aria-controls="my-table"
+      class="customPagination"
+    ></b-pagination>
+    <b-table  id="my-table"
+      :items="offers"
+      :per-page="perPage"
+      :current-page="currentPage"
+      bordered
+      fixed></b-table>
+    <div class="footer-copyright text-center py-3">
+      <mdb-container fluid>
+      </mdb-container>
+    </div>
+
   </div>
 </template>
+
+<style>
+.page-link{
+  color: red !important;
+  margin-top: 20px;
+}
+.page-item.active .page-link{
+  background-color: lightgray !important;
+}
+.pagination{
+  align-items: center;
+  justify-content: center;
+}
+.table{
+  width: 50% !important;
+  margin: auto;
+  ;
+}
+.search-bar{
+   width: 190px !important;
+  margin: auto;
+  margin-top: 20px;
+}
+.footer-copyright{
+  background-color: #800000;
+}
+</style>
 
 <script>
 // @ is an alias to /src
@@ -38,16 +66,22 @@ export default {
   },
   data() {
     return {
-      job_titles: [],
+      offers: [],
+      perPage: 10,
+      currentPage: 1,
     };
+  },
+  computed: {
+    rows() {
+      return this.offers.length;
+    },
   },
   methods: {
     getJob() {
       const path = 'http://localhost:5000';
       axios.get(path)
         .then((res) => {
-          this.job_titles = res.data.job_titles;
-          this.job_details = res.data.job_details;
+          this.offers = res.data.offers;
         })
         .catch((error) => {
           // eslint-disable-next-line
@@ -57,6 +91,10 @@ export default {
   },
   created() {
     this.getJob();
+  },
+  onChangePage(pageOfItems) {
+    // update page of items
+    this.pageOfItems = pageOfItems;
   },
 };
 </script>
