@@ -1,27 +1,35 @@
 # JobScraping
 JobScraping is a portal analyzing the current job market and providing you with various statistics
 
-* [Charakterystyka oprogramowania](#Charakterystykaoprogramowania)
-* [Prawa autorskie](#Prawaautorskie)
-* [Specyfikacja wymagań](#Specyfikacjawymagań)
+* [Charakterystyka oprogramowania](#Charakterystyka-oprogramowania)
+* [Prawa autorskie](#Prawa-autorskie)
+* [Specyfikacja wymagań](#Specyfikacja-wymagań)
+* [Architektura systemu](#Architektura-systemu)
+* [Architektura uruchomieniowa](#Architektura-uruchomieniowa)
 
 
 
-## Charakterystyka oprogramowania
+## 1 Charakterystyka oprogramowania
 
 Nazwa skrócona: JobScraping
 
 Nazwa pełna: JobScraping – find your dream job and career opportunities that match your interests. 
 
 Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas ofert pracy. Prezentująca statystyki i trendy związane z rynkiem pracy.
+ ### Prototyp aplikacji
+ 
+ ![Prototyp strona główna](./Prototype/Prototype_mainPage.png)
+ 
+ ![Prototyp strona główna](./Prototype/Prototype_statistics.png) 
+ 
 
-## Prawa autorskie
+## 2 Prawa autorskie
 
 Autorzy: Aleksandra Okrój, Mateusz Sałata, Natalia Skórowska
 
 Licencja: Uznanie autorstwa
 
-## Specyfikacja wymagań
+## 3 Specyfikacja wymagań
 
 | ID | Kategoria | Podkategoria | Nazwa krótka | Opis | Priorytet
 | ------------- | ------------- |------|------|---------|--------|
@@ -55,7 +63,7 @@ Licencja: Uznanie autorstwa
 | WN20 | Niefunkcjonalne | Bezpieczeństwo | Środowisko | Aplikacja powinna zawierać środowiska testowe i produkcyjne. | P3
 | WN21 | Niefunkcjonalne | Jakość | Utrzymanie | Aplikacja po wdrożeniu na produkcję powinna być utrzymywana zgodnie z z obowiązującymi uwarunkowaniami prawnymi i technologicznymi poprzez monitorowanie funkcjonowania aplikacji, analizę zmian i wdrażanie ewentualnych poprawek. | P2
 
-## Architektura systemu/oprogramowania
+## 4 Architektura systemu
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
@@ -69,7 +77,7 @@ Licencja: Uznanie autorstwa
 |8| Bootstrap | Wygląd interfejsów użytkownika aplikacji| 4.6.0 (19.01.2021) |
 |9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
 
-## Architektura uruchomieniowa:
+## 5 Architektura uruchomieniowa
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
