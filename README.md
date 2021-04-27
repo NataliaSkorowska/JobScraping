@@ -23,9 +23,8 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
  ![Prototyp strona główna](./Prototype/Prototype_statistics.png) 
  
   ### Aktualny postęp - działający paging
-  ![Postep 1 strona](./Prototype/screen1.PNG)
-  
-  ![Postep 2 strona](./Prototype/screen2.PNG)
+  ![Postęp 1](./Prototype/screen1_2.PNG)
+  ![Postęp 2](./Prototype/screen2_2.PNG)
  
 
 ## 2 Prawa autorskie
