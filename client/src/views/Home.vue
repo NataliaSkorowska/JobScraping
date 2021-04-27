@@ -1,27 +1,33 @@
 <template>
   <div>
-    <HomePage msg="Welcome to JobScraper"/>
+    <HomePage/>
     <div class="search-bar">
       <input type="text"
          placeholder="Szukaj"
          v-model="filter" />
+
     </div>
-    <b-pagination
+    <b-table  id="my-table"
+      :items="offers"
+      :per-page="perPage"
+      :current-page="currentPage"
+      :filter="filter"
+      bordered
+      fixed
+      class="table"></b-table>
+      <b-pagination
       v-model="currentPage"
       :total-rows="rows"
       :per-page="perPage"
       aria-controls="my-table"
       class="customPagination"
     ></b-pagination>
-    <b-table  id="my-table"
-      :items="offers"
-      :per-page="perPage"
-      :current-page="currentPage"
-      bordered
-      fixed></b-table>
-    <div class="footer-copyright text-center py-3">
-      <mdb-container fluid>
-      </mdb-container>
+    <div>
+      <footer class="footer">
+         <div class="text-center p-3">
+   Projekt stworzony przez: Aleksandra Okrój, Natalia Skórowska, Mateusz Sałata
+  </div>
+      </footer>
     </div>
 
   </div>
@@ -48,9 +54,26 @@
    width: 190px !important;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
-.footer-copyright{
+.footer{
   background-color: #800000;
+  width:100%;
+  height: 65px;
+  bottom:0;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  color: white;
+}
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
 }
 </style>
 
@@ -67,8 +90,9 @@ export default {
   data() {
     return {
       offers: [],
-      perPage: 10,
+      perPage: 8,
       currentPage: 1,
+      filter: '',
     };
   },
   computed: {
@@ -92,9 +116,9 @@ export default {
   created() {
     this.getJob();
   },
-  onChangePage(pageOfItems) {
-    // update page of items
-    this.pageOfItems = pageOfItems;
+  sortBy(sortKey) {
+    this.reverse = (this.sortKey === sortKey) ? !this.reverse : false;
+    this.sortKey = sortKey;
   },
 };
 </script>
