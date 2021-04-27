@@ -22,7 +22,7 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
  
  ![Prototyp strona główna](./Prototype/Prototype_statistics.png) 
  
-  ### Aktualny postęp - działająca paginacja 
+  ### Aktualny postęp - działający paging
   ![Postep 1 strona](./Prototype/screen1.PNG)
   
   ![Postep 2 strona](./Prototype/screen2.PNG)
