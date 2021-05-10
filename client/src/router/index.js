@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Ping from '../components/Ping.vue';
 import 'bootstrap/dist/css/bootstrap.css'; // eslint-disable-line import/no-extraneous-dependencies
+import NotFoundPage from '/src/views/NotFoundPage.vue';
 
 Vue.use(VueRouter);
 
@@ -11,6 +12,10 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '*',
+    component: NotFoundPage,
   },
   {
     path: '/about',
