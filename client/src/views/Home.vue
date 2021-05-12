@@ -1,22 +1,33 @@
 <template>
   <div>
     <HomePage/>
+    <p class="text">Filtruj oferty po pracodawcy, stanowisku lub lokalizacji: </p>
     <div class="search-bar">
+      <b-icon-search variant="danger" font-scale="1.5"></b-icon-search>
       <input type="text"
          placeholder="Szukaj"
          v-model="filter" />
 
     </div>
+    <b-pagination
+      v-model="currentPage"
+      :total-rows="rows"
+      :per-page="perPage"
+      aria-controls="my-table"
+      class="customPagination"
+    ></b-pagination>
     <b-table  id="my-table"
       :items="offers"
       :fields="fields"
+      :sort-by.sync="sortBy"
+      :sort-desc.sync="sortDesc"
+      responsive="sm"
       :per-page="perPage"
       :current-page="currentPage"
       :filter="filter"
       bordered
-      fixed
       class="table">
-       <template template v-slot:cell(Stanowisko)="data">
+       <template template v-slot:cell(Stanowisko)="data" class="Stanowisko">
         <b-link v-bind:href="data.item.Link">{{ data.item.Stanowisko}}</b-link>
       </template>
       </b-table>
@@ -50,19 +61,27 @@
   align-items: center;
   justify-content: center;
 }
+.text{
+  text-align: center;
+  margin-top: 30px;
+  color: red;
+  font-weight: bold;
+}
 .table{
-  width: 50% !important;
+  width: 1000px !important;
   margin: auto;
-  ;
 }
 .search-bar{
    width: 190px !important;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer{
-  background-color: #800000;
+  background-color: #cc0000;
   width:100%;
   height: 65px;
   bottom:0;
@@ -94,7 +113,11 @@ export default {
   },
   data() {
     return {
-      fields: ['Pracodawca', 'Stanowisko', 'Lokalizacja'],
+      sortBy: 'Pracodawca',
+      sortDesc: false,
+      fields: [{ key: 'Pracodawca', sortable: true },
+        { key: 'Stanowisko', sortable: false },
+        { key: 'Lokalizacja', sortable: true }],
       offers: [],
       perPage: 30,
       currentPage: 1,

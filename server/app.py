@@ -25,7 +25,7 @@ def pracujPlScraping(webpage, page_number):
      soup_company = result.findAll('a', class_='offer-company__name')
      for x in range(len(soup_title)):
          offers.append({'Stanowisko': soup_title[x].text, 'Lokalizacja': soup_details[x].text, 'Link': soup_links[x]['href'], 'Pracodawca': soup_company[x].text})
-         if page_number < 2:
+         if page_number < 6:
              page_number = page_number + 1
              pracujPlScraping(webpage, page_number)
 
@@ -39,7 +39,7 @@ def pracaPlScraping(webpage1, page_number, webpage2):
     soup_links=result.findAll('a', class_='listing__offer-title', href=True)
     for x in range (len(soup_title)):
         offers.append({'Stanowisko': soup_title[x].text, 'Lokalizacja': soup_localization[x].text, 'Link': 'https://www.praca.pl'+soup_links[x]['href'], 'Pracodawca': soup_company[x].text})
-        if page_number < 2:
+        if page_number < 6:
              page_number = page_number + 1
              pracaPlScraping(webpage1,page_number, webpage2)
 
@@ -53,7 +53,7 @@ def infopracaPlScraping(webpage, page_number):
     soup_links=result.findAll('a', class_='job-offer', href=True)
     for x in range (len(soup_title)):
         offers.append({'Stanowisko': soup_title[x].text, 'Lokalizacja': soup_localization[x].text, 'Link': 'https://www.infopraca.pl'+soup_links[x]['href'] ,'Pracodawca': soup_company[x].text})
-        if page_number < 2:
+        if page_number < 6:
              page_number = page_number + 1
              infopracaPlScraping(webpage, page_number)
 
