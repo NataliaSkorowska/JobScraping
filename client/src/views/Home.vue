@@ -9,12 +9,17 @@
     </div>
     <b-table  id="my-table"
       :items="offers"
+      :fields="fields"
       :per-page="perPage"
       :current-page="currentPage"
       :filter="filter"
       bordered
       fixed
-      class="table"></b-table>
+      class="table">
+       <template template v-slot:cell(Stanowisko)="data">
+        <b-link v-bind:href="data.item.Link">{{ data.item.Stanowisko}}</b-link>
+      </template>
+      </b-table>
       <b-pagination
       v-model="currentPage"
       :total-rows="rows"
@@ -89,6 +94,7 @@ export default {
   },
   data() {
     return {
+      fields: ['Pracodawca', 'Stanowisko', 'Lokalizacja'],
       offers: [],
       perPage: 8,
       currentPage: 1,
