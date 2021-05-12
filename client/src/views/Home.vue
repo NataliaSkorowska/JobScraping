@@ -96,7 +96,7 @@ export default {
     return {
       fields: ['Pracodawca', 'Stanowisko', 'Lokalizacja'],
       offers: [],
-      perPage: 8,
+      perPage: 30,
       currentPage: 1,
       filter: '',
     };
