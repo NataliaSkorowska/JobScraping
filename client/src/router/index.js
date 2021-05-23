@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import NotFoundPage from '../views/NotFoundPage.vue';
+import Statistics from '../views/Statistics.vue';
 
 Vue.use(VueRouter);
 
@@ -11,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/stats',
+    name: 'Statistics',
+    component: Statistics,
   },
   {
     path: '*',

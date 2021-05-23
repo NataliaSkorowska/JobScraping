@@ -1,0 +1,17 @@
+{
+  "name": "jobscraping-main",
+  "version": "1.0.0",
+  "description": "JobScraping is a portal analyzing the current job market and providing you with various statistics",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
