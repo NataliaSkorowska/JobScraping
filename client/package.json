@@ -13,11 +13,17 @@
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.1",
     "bootstrap-vue": "^2.21.2",
+    "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
+    "hchs-vue-charts": "^1.2.8",
     "jw-vue-pagination": "^1.0.3",
     "mdbvue": "^6.7.2",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-axios": "^3.2.4",
+    "vue-chartjs": "^3.5.1",
+    "vue-chartkick": "^0.6.1",
+    "vue-router": "^3.2.0",
+    "vue.charts.css": "0.0.20"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
