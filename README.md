@@ -22,9 +22,12 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
  
  ![Prototyp strona główna](./Prototype/Prototype_statistics.png) 
  
-  ### Aktualny postęp - działający paging
-  ![Postęp 1](./Prototype/screen1_2.PNG)
-  ![Postęp 2](./Prototype/screen2_2.PNG)
+  ### Aktualny postęp - w pełni działająca aplikacja (możliwa rozbudowa)
+  
+  ![Efekt końcowy - strona główna](./Prototype/Efekt1.png) 
+  ![Efekt końcowy - statystyki](./Prototype/Efekt2.png) 
+  ![Efekt końcowy - statystyki](./Prototype/Efekt3.png) 
+![Efekt końcowy - statystyki](./Prototype/Efekt4.png) 
  
 
 ## 2 Prawa autorskie
