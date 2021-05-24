@@ -31,7 +31,7 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
 
 Autorzy: Aleksandra Okrój, Mateusz Sałata, Natalia Skórowska
 
-Licencja: Uznanie autorstwa
+Licencja: Uznanie autorstwa - użycie niekomercyjne
 
 ## 3 Specyfikacja wymagań
 
@@ -53,17 +53,20 @@ Licencja: Uznanie autorstwa
 | WN4 | Niefunkcjonalne | Projektowe | Responsywność | Interfejs aplikacji musi być responsywny, jego rozmiar, wygląd i układ dostosowuje się automatycznie do możliwości urządzenia, na którym jest wyświetlany.| P1
 | WN5 | Niefunkcjonalne | Wydajnościowe | Liczba użytkowników na stronie | Jednocześnie ze strony może korzystać 500 osób znajdujących się w różnych lokalizacjach | P2
 | WN6 | Niefunkcjonalne | Wydajnościowe | Czas reakcji | Maksymalny czas pomiędzy pobudzeniem przez użytkownika a odpowiedzią systemu nie powinien być dłuższy niż 4 sekundy.| P2
-| WN7 | Niefunkcjonalne | GUI | Język polski | Interfejs Użytkownika, wszelkie komunikaty, powiadomienia, alerty przesyłane (pokazywane) Użytkownikowi muszą być prezentowane w języku polskim. | P1
-| WN8 | Niefunkcjonalne | GUI | Prosta obsługa | Aplikacja musi  być możliwa do obsługi dla osób bez specjalistycznej wiedzy informatycznej i programistycznej, w tym umożliwiać pracę jedynie z poziomu interfejsu, bez konieczności pisania kodu. | P1
-| WN9 | Niefunkcjonalne | GUI | Ergonomiczny interfejs |  Moduły funkcjonalne muszą być wyposażone w graficzny, funkcjonalny, przyjazny oraz intuicyjny interfejs Użytkownika.| P1
+| WN7 | Niefunkcjonalne | Interfejs | Język polski | Interfejs Użytkownika, wszelkie komunikaty, powiadomienia, alerty przesyłane (pokazywane) Użytkownikowi muszą być prezentowane w języku polskim. | P1
+| WN8 | Niefunkcjonalne | Interfejs | Prosta obsługa | Aplikacja musi  być możliwa do obsługi dla osób bez specjalistycznej wiedzy informatycznej i programistycznej, w tym umożliwiać pracę jedynie z poziomu interfejsu, bez konieczności pisania kodu. | P1
+| WN9 | Niefunkcjonalne | Interfejs | Ergonomia |  Moduły funkcjonalne muszą być wyposażone w graficzny, funkcjonalny, przyjazny oraz intuicyjny interfejs Użytkownika.| P1
 | WN10| Niefunkcjonalne | Jakość | Repozytorium | Wszystkie wytworzone pliki (w szczególności całość kodu źródłowego) aplikacji muszą być zapisywane w repozytorium i aktualizowane w ramach przekazywania kolejnych wersji aplikacji.| P2
 | WN11 | Niefunkcjonalne | Projektowe | Pobieranie danych | Oferty pracy i dane z nimi związane pobieranie są z innych stron internetowych: infoPraca.pl, praca.pl, pracuj.pl | P1
-| WN12| Niefunkcjonalne | GUI | Przekierowanie do oferty | Link, który przekierowuje użytkowników do konkretnej oferty pracy powinien być wyraźnie zaznaczony.| P2
+| WN12| Niefunkcjonalne | Interfejs | Przekierowanie do oferty | Link, który przekierowuje użytkowników do konkretnej oferty pracy powinien być wyraźnie zaznaczony.| P2
 | WN13| Niefunkcjonalne | Bezpieczeństwo | Pobieranie ofert | Oferty pobrane do aplikacji pochodzą z bezpiecznych i uprzednio sprawdzonych stron. | P2
 | WN14 | Niefunkcjonalne | Ergonomia | Rozbudowa | Aplikacja powinna zostać napisana w taki sposób aby umożliwić ewentualną implementację kolejnych funkcjonalności lub modyfikację poszczególnych modułów w przyszłości. | P2
 | WN15 | Niefunkcjonalne | Jakość | Kopie zapasowe | Aplikacja powinna posiadać kopię zapasową tak, aby istniała możliwość odtworzenia środowiska i danych (w części lub w całości). | P2
 | WN16 | Niefunkcjonalne | Jakość | Dokumentacja | Do systemu powinna zostać dostarczona dedykowana dokumentacja stworzona w polskiej wersji językowej. | P3
-| WN17 | Niefunkcjonalne | Jakość | Struktura | Stosowanie zasad dotyczących podziału kodu na mniejsze pliki oraz przejrzystej struktury katalogów. | P3
+| WN17 | Niefunkcjonalne | Jakość | Struktura | Aplikacja została stworzona zgodnie z zasadami dotyczącymi podziału kodu na mniejsze pliki oraz z zachowaniem przejrzystej struktury katalogów. | P3
+| WN18 | Niefunkcjonalne | Interfejs | Spójność | Interfejsy i elementy aplikacji są estetyczne i spójne ze sobą | P2
+| WN19 | Niefunkcjonalne | Interfejs | Nazwa portalu | Nazwa portalu została umieszczona na środku górnego panelu apikacji | P1
+| WN20 | Niefunkcjonalne | Interfejs | Stopka | Na końcu każdej strony umieszczona została stopka, na której widnieją imiona i nazwiska twórców aplikacji | P3
 
 
 ## 4 Architektura systemu
@@ -79,6 +82,8 @@ Licencja: Uznanie autorstwa
 |7| Vue | Tworzenie dynamicznych interfejsów użytkownika| 2.9.6 |
 |8| Bootstrap | Wygląd interfejsów użytkownika aplikacji| 4.6.0 (19.01.2021) |
 |9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
+|10| Chartkick | Wykresy ukazujące dane statystyczne | 4.0.2 (2021-04-06)| 
+|11| Figma | Stworzenie prototypu aplikacji | - |
 
 ## 5 Architektura uruchomieniowa
 
@@ -88,7 +93,7 @@ Licencja: Uznanie autorstwa
 |2| Windows 10 | System operacyjny, na którym stworzona została aplikacja| 20H2 19042.867(03.09.2020)|
 |3| Google Chrome | Przeglądarka, w której uruchamiana jest aplikacja| 89.0.4389.114 (03.03.2021)|
 |4| Git | System kontroli wersji | 2.31.1 (26.03.2021) |
-|5| GitHub | Serwis na którym zamieszczone zostało repozytorium z aplikacją | |
+|5| GitHub | Serwis na którym zamieszczone zostało repozytorium z aplikacją | 3.26.2 |
 
 
 
