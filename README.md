@@ -4,9 +4,10 @@ JobScraping to portal analizujący aktualne warunki na rynku pracy. Oferujący z
 * [Charakterystyka oprogramowania](#1-Charakterystyka-oprogramowania)
 * [Prawa autorskie](#2-Prawa-autorskie)
 * [Specyfikacja wymagań](#3-Specyfikacja-wymagań)
-* [Architektura systemu](#4-Architektura-systemu)
-* [Architektura uruchomieniowa](#5-Architektura-uruchomieniowa)
-* [Scenariusze testów](#6-Scenariusze-testów)
+* [Projekt-język UML](#4-Projekt-język-UML)
+* [Architektura systemu](#5-Architektura-systemu)
+* [Architektura uruchomieniowa](#6-Architektura-uruchomieniowa)
+* [Scenariusze testów](#7-Scenariusze-testów)
 
 
 ## 1 Charakterystyka oprogramowania
@@ -71,8 +72,11 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 | WN19 | Niefunkcjonalne | Interfejs | Nazwa portalu | Nazwa portalu została umieszczona na środku górnego panelu apikacji | P1
 | WN20 | Niefunkcjonalne | Interfejs | Stopka | Na końcu każdej strony umieszczona została stopka, na której widnieją imiona i nazwiska twórców aplikacji | P3
 
+## 4 Projekt-język UML
 
-## 4 Architektura systemu
+![Diagram wdrożenia](./Prototype/deploymentDiagram.png) 
+
+## 5 Architektura systemu
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
@@ -87,8 +91,9 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
 |10| Chartkick | Wykresy ukazujące dane statystyczne | 4.0.2 (2021-04-06)| 
 |11| Figma | Stworzenie prototypu aplikacji | - |
+|12| Visual Paradigm | Stworzenie diagramu wdrożenia | - |
 
-## 5 Architektura uruchomieniowa
+## 6 Architektura uruchomieniowa
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
@@ -98,7 +103,7 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |4| Git | System kontroli wersji | 2.31.1 (26.03.2021) |
 |5| GitHub | Serwis na którym zamieszczone zostało repozytorium z aplikacją | 3.26.2 |
 
-## 6 Scenariusze testów
+## 7 Scenariusze testów
 
  
 | Lp. | Nazwa | Warunki wstępne| Czynności przygotowawcze | Oczekiwany rezultat |
