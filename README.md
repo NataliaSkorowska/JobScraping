@@ -75,6 +75,7 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 ## 4 Projekt-język UML
 
 ![Diagram wdrożenia](./Prototype/deploymentDiagram.png) 
+![Diagram przypadków użycia](./Prototype/useCaseDiagram.png) 
 
 ## 5 Architektura systemu
 
