@@ -4,7 +4,7 @@ JobScraping to portal analizujący aktualne warunki na rynku pracy. Oferujący z
 * [Charakterystyka oprogramowania](#1-Charakterystyka-oprogramowania)
 * [Prawa autorskie](#2-Prawa-autorskie)
 * [Specyfikacja wymagań](#3-Specyfikacja-wymagań)
-* [Projekt-język UML](#4-Projekt-język-UML)
+* [Projekt język UML](#4-Projekt-język-UML)
 * [Architektura systemu](#5-Architektura-systemu)
 * [Architektura uruchomieniowa](#6-Architektura-uruchomieniowa)
 * [Scenariusze testów](#7-Scenariusze-testów)
