@@ -99,6 +99,12 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |11| Figma | Stworzenie prototypu aplikacji | - |
 |12| Visual Paradigm | Stworzenie diagramu wdrożenia | - |
 
+
+#### Strony, z których pobierane są oferty pracy i statystyki:
+- Pracuj.pl
+- Infopraca.pl
+- Praca.pl
+ 
 ## 6 Architektura uruchomieniowa
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
