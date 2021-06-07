@@ -35,7 +35,7 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
 
 Autorzy: Aleksandra Okrój, Mateusz Sałata, Natalia Skórowska
 
-Licencja: Uznanie autorstwa - użycie niekomercyjne
+Licencja: Uznanie autorstwa - użycie niekomercyjne 4.0
 
 ## 3 Specyfikacja wymagań
 
@@ -72,7 +72,7 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 | WN19 | Niefunkcjonalne | Interfejs | Nazwa portalu | Nazwa portalu została umieszczona na środku górnego panelu apikacji | P1
 | WN20 | Niefunkcjonalne | Interfejs | Stopka | Na końcu każdej strony umieszczona została stopka, na której widnieją imiona i nazwiska twórców aplikacji | P3
 
-## 4 Projekt język UML
+## 4 Projekt (język UML)
 
 #### Diagram wdrożenia:
 
