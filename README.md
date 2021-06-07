@@ -97,7 +97,7 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
 |10| Chartkick | Wykresy ukazujące dane statystyczne | 4.0.2 (2021-04-06)| 
 |11| Figma | Stworzenie prototypu aplikacji | - |
-|12| Visual Paradigm | Stworzenie diagramu wdrożenia | - |
+|12| Visual Paradigm | Stworzenie diagramu wdrożenia i diagramu przypadków użycia| - |
 
 
 #### Strony, z których pobierane są oferty pracy i statystyki:
