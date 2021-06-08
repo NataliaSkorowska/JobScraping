@@ -1,12 +1,13 @@
 # JobScraping
-JobScraping is a portal analyzing the current job market and providing you with various statistics
+JobScraping to portal analizujący aktualne warunki na rynku pracy. Oferujący zarówno możliwość wyszukania ofert pracy jak i wgląd w różnego rodzaju statystyki dotyczące sytuacji na rynku pracy.
 
 * [Charakterystyka oprogramowania](#1-Charakterystyka-oprogramowania)
 * [Prawa autorskie](#2-Prawa-autorskie)
 * [Specyfikacja wymagań](#3-Specyfikacja-wymagań)
-* [Architektura systemu](#4-Architektura-systemu)
-* [Architektura uruchomieniowa](#5-Architektura-uruchomieniowa)
-
+* [Projekt język UML](#4-Projekt-język-UML)
+* [Architektura systemu](#5-Architektura-systemu)
+* [Architektura uruchomieniowa](#6-Architektura-uruchomieniowa)
+* [Scenariusze testów](#7-Scenariusze-testów)
 
 
 ## 1 Charakterystyka oprogramowania
@@ -34,7 +35,7 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
 
 Autorzy: Aleksandra Okrój, Mateusz Sałata, Natalia Skórowska
 
-Licencja: Uznanie autorstwa - użycie niekomercyjne
+Licencja: Uznanie autorstwa - użycie niekomercyjne 4.0
 
 ## 3 Specyfikacja wymagań
 
@@ -71,8 +72,17 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 | WN19 | Niefunkcjonalne | Interfejs | Nazwa portalu | Nazwa portalu została umieszczona na środku górnego panelu apikacji | P1
 | WN20 | Niefunkcjonalne | Interfejs | Stopka | Na końcu każdej strony umieszczona została stopka, na której widnieją imiona i nazwiska twórców aplikacji | P3
 
+## 4 Projekt (język UML)
 
-## 4 Architektura systemu
+#### Diagram wdrożenia:
+
+![Diagram wdrożenia](./Prototype/deploymentDiagram2.png)
+
+#### Diagram przypadków użycia:
+
+![Diagram przypadków użycia](./Prototype/useCaseDiagram.png) 
+
+## 5 Architektura systemu
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
@@ -87,8 +97,15 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |9| Axios | Komunikacja z API | 0.21.1 (21.12.2020) |
 |10| Chartkick | Wykresy ukazujące dane statystyczne | 4.0.2 (2021-04-06)| 
 |11| Figma | Stworzenie prototypu aplikacji | - |
+|12| Visual Paradigm | Stworzenie diagramu wdrożenia i diagramu przypadków użycia| - |
 
-## 5 Architektura uruchomieniowa
+
+#### Strony, z których pobierane są oferty pracy i statystyki:
+- Pracuj.pl
+- Infopraca.pl
+- Praca.pl
+ 
+## 6 Architektura uruchomieniowa
 
 | Lp. | Nazwa produktu | Przeznaczenie w projekcie | Wersja |
 | ------------- | ------------- |------|------|
@@ -98,5 +115,16 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne
 |4| Git | System kontroli wersji | 2.31.1 (26.03.2021) |
 |5| GitHub | Serwis na którym zamieszczone zostało repozytorium z aplikacją | 3.26.2 |
 
+## 7 Scenariusze testów
 
+ 
+| Lp. | Nazwa | Warunki wstępne| Czynności przygotowawcze | Oczekiwany rezultat |
+| ------------- | ------------- |------|------|-------|
+|1| Widoczność strony głównej | Serwer, na którym znajduje się porta jest uruchomiony i poprawnie skonfigurowany. | Użytkownik przechodzi do strony głównej portalu 'JobScraping'. | Strona główna portalu 'JobScraping' zostaje wyświetlona. |
+|2| Widoczność strony zawierającej statystyki| Serwer, na którym znajduje się porta jest uruchomiony i poprawnie skonfigurowany. | Użytkownik przechodzi do strony głównej portalu 'JobScraping', a następnie z górnego panelu po prawej stronie wybiera zakładkę 'Statystyki'. | Strona ze statystykami portalu 'JobScraping' zostaje wyświetlona. |
+|3| Nawigacja przez górne i dolne menu na stronie głównej | Strona główna istnieje. Utworzono górne oraz dolne menu umożliwiające nawigację. | Użytkownik przechodzi do strony głównej portalu 'JobScraping'. | Strona główna zostaje wyświetlona. Na górze oraz na dole strony wyświetla się menu nawigacji umożliwiające przejście do kolejnych stron z wynikami scrapowania. |
+|4|  Widoczność ofert pracy na stronie głównej | Strona główna istnieje.| Użytkownik przechodzi do strony głównej portalu 'JobScraping'. | Oferty pracy zostają wyświetlone w formie tabeli na stronie głównej. |
+|5| Przejście do strony źródłowej danej oferty przez link | Strona główna istnieje. Na stronie głównej wyświetla się lista zawierająca nazwy ofert pracy. | Użytkownik przechodzi do strony głównej portalu 'JobScraping" i wykonuje kliknięcie na tytule danej oferty pracy zawartej w tabeli. | Kliknięcie na nazwę oferty pracy zawartej w tabeli powoduje przejście na stronę źródłową zawierającą wszelkie szczegóły oferty. |
+|6| Wyszukanie ofert pracy po nazwie, miejscowości i firmie| Strona główna istnieje. Na górze strony głównej znajduje się pole umożliwiające wpisanie interesującej użytkownika nazwy.| Użytkownik przechodzi do strony głównej portalu 'JobScraping', a następnie wpisuje interesującą go firmę, nazwę lub lokalizację oferty w odpowiednie pole. | Wyświetlone zostają tylko te oferty, które odpowiadają danemu zapytaniu użytkownika. |
+ 
 
