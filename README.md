@@ -25,9 +25,9 @@ Krótki opis: Strona internetowa umożliwiająca znalezienie interesujących nas
  
   ### Aktualny postęp - w pełni działająca aplikacja (możliwa rozbudowa)
   
-  ![Efekt końcowy - strona główna](./Prototype/Efekt1.png) 
-  ![Efekt końcowy - statystyki](./Prototype/Efekt2.png) 
-  ![Efekt końcowy - statystyki](./Prototype/Efekt3.png) 
+![Efekt końcowy - strona główna](./Prototype/Efekt1.png) 
+![Efekt końcowy - statystyki](./Prototype/Efekt2.png) 
+![Efekt końcowy - statystyki](./Prototype/Efekt3.png) 
 ![Efekt końcowy - statystyki](./Prototype/Efekt4.png) 
  
 
@@ -78,9 +78,6 @@ Licencja: Uznanie autorstwa - użycie niekomercyjne 4.0
 
 ![Diagram wdrożenia](./Prototype/deploymentDiagram2.png)
 
-#### Diagram przypadków użycia:
-
-![Diagram przypadków użycia](./Prototype/useCaseDiagram.png) 
 
 ## 5 Architektura systemu
 
